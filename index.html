@@ -1,34 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leaflet Step-1</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Leaflet Step-1</title>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin="" />
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+  </head>
 
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
-</head>
+  <body>
+    <header class="navigation-header">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#visualization">Visualization</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Earthquake & Trends</h1>
+      </div>
+    </section>
 
-  <!-- The div that holds our map -->
-  <div id="map"></div>
+    <section id="introduction" class="introduction">
+      <div class="container">
+        <h2>Introduction</h2>
+        <p>
+          Welcome to our Earthquake & Trends website, where you can explore the
+          latest seismic activities, trends, and visualizations of earthquakes
+          from around the world. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Ratione voluptas repudiandae harum blanditiis unde
+          perferendis, quos numquam fugit? Aliquid ex voluptas ipsa error. Et
+          tenetur saepe quas nihil, officiis modi!
+        </p>
+        <p>
+          Our mission is to provide you with up-to-date information and
+          insightful visual representations of earthquake data, helping you gain
+          a deeper understanding of these natural phenomena. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Nam dolore, libero sequi non
+          corporis natus dolorem maxime? Nulla ipsa possimus tempora numquam
+          incidunt, in accusamus sapiente quam eos dolor aspernatur.
+        </p>
+        <p>
+          Our mission is to provide you with up-to-date information and
+          insightful visual representations of earthquake data, helping you gain
+          a deeper understanding of these natural phenomena. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Nam dolore, libero sequi non
+          corporis natus dolorem maxime? Nulla ipsa possimus tempora numquam
+          incidunt, in accusamus sapiente quam eos dolor aspernatur.
+        </p>
+      </div>
+    </section>
 
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-  <!-- D3 JavaScript -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="static/js/logic.js"></script>
-</body>
+    <section id="visualization" class="visualization">
+      <div class="container">
+        <h2>Visualization</h2>
+        <p>Select a dataset to visualize:</p>
+        <div class="dropdown">
+          <select id="datasetSelect">
+            <option value="dataset1">Dataset 1</option>
+            <option value="dataset2">Dataset 2</option>
+            <option value="dataset3">Dataset 3</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <!-- The div that holds our map -->
+    <div id="map"></div>
 
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- D3 JavaScript -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+  </body>
 </html>
