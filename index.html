@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Leaflet Step-1</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Leaflet Step-1</title>
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin="" />
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+  </head>
 
+<<<<<<< HEAD
    <!-- Leaflet JavaScript code -->
    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
@@ -23,12 +30,67 @@
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
 </head>
+=======
+  <body>
+    <header class="navigation-header">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#visualization">Visualization</a></li>
+        </ul>
+      </nav>
+    </header>
+>>>>>>> d350bb2893bc1a308a8948bb50895c51b5e23928
 
-<body>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Earthquake & Trends</h1>
+      </div>
+    </section>
 
-  <!-- The div that holds our map -->
-  <div id="map"></div>
+    <section id="introduction" class="introduction">
+      <div class="container">
+        <h2>Introduction</h2>
+        <p>
+          Welcome to "Earthquakes and Trends," where we embark on a journey
+          through seismic history and modern data analysis. Earthquakes have
+          long fascinated and terrified humanity, and we're here to unravel
+          their mysteries using a wealth of information, including data from the
+          USGS and other reliable sources.
+        </p>
+        <p>
+          From ancient myths to modern science, earthquakes have captivated our
+          imagination. Early humans pondered their origins, while scientific
+          pioneers like John Michell and Robert Mallet paved the way for
+          understanding seismic waves. The birth of seismology and the
+          establishment of the USGS marked turning points, leading to today's
+          advanced technologies that enable us to monitor, measure, and even
+          predict these seismic events.
+        </p>
+        <p>
+          According to long-term records (since about 1900), the USGS (United
+          States Geological Survey) concludes we expect about 16 major
+          earthquakes in any given year. That includes 15 earthquakes in the
+          magnitude 7 range and one earthquake magnitude 8.0 or greater. In the
+          past 40-50 years, our records show that we have exceeded the long-term
+          average number of major earthquakes about a dozen times. The year with
+          the largest total was 2010, with 23 major earthquakes (greater than or
+          equal to magnitude 7.0). In other years the total was well below the
+          annual long-term average of 16 major earthquakes. 1989 only had 6
+          major earthquakes and 1988 only had 7.
+        </p>
+        <p>
+          In this project, we delve into data to answer a vital question: Are
+          earthquakes on the rise? Through captivating visualizations and data
+          analysis, we'll uncover patterns and shifts in tectonic behavior. By
+          navigating this interactive dashboard, you'll join us in the quest to
+          understand our dynamic planet and ensure a safer future.
+        </p>
+      </div>
+    </section>
 
+<<<<<<< HEAD
   <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -38,5 +100,33 @@
   <!-- Our JavaScript -->
   <script type="text/javascript" src="static/js/logic2.js"></script>
 </body>
+=======
+    <section id="visualization" class="visualization">
+      <div class="container">
+        <h2>Visualization</h2>
+        <p>Select a dataset to visualize:</p>
+        <div class="dropdown">
+          <select id="datasetSelect">
+            <option value="Historical data">Earthquakes on the Rise?</option>
+            <option value="Occurrences">Map Popups and clicks</option>
+            <option value="Occurrences">Tectonic plates</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <!-- The div that holds our map -->
+    <div id="map"></div>
+>>>>>>> d350bb2893bc1a308a8948bb50895c51b5e23928
 
+    <!-- Leaflet JS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- D3 JavaScript -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Our JavaScript -->
+    <script type="text/javascript" src="static/js/logic.js"></script>
+  </body>
 </html>
