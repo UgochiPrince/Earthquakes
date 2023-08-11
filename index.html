@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Leaflet Step-1</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 3</title>
+  
     <!-- Leaflet CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-
+      crossorigin="" />
+  
     <!-- Our CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
+
+    <!-- D3 JavaScript -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
   </head>
-
-<<<<<<< HEAD
-   <!-- Leaflet JavaScript code -->
-   <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-   integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
-   crossorigin=""></script>
-
-   <!-- D3 library -->
-   <script src="https://d3js.org/d3.v5.min.js"></script>
-
-  <!-- Our CSS -->
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
-</head>
-=======
-  <body>
-    <header class="navigation-header">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#visualization">Visualization</a></li>
-        </ul>
-      </nav>
-    </header>
->>>>>>> d350bb2893bc1a308a8948bb50895c51b5e23928
-
+<body>
+  <header class="navigation-header">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#visualization">Visualization</a></li>
+      </ul>
+    </nav>
+  </header>
     <section class="hero">
       <div class="hero-content">
         <h1>Earthquake & Trends</h1>
@@ -90,43 +79,28 @@
       </div>
     </section>
 
-<<<<<<< HEAD
-  <!-- Leaflet JS -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-  <!-- D3 JavaScript -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <!-- Our JavaScript -->
-  <script type="text/javascript" src="static/js/logic2.js"></script>
-</body>
-=======
     <section id="visualization" class="visualization">
       <div class="container">
         <h2>Visualization</h2>
         <p>Select a dataset to visualize:</p>
         <div class="dropdown">
-          <select id="datasetSelect">
-            <option value="Historical data">Earthquakes on the Rise?</option>
-            <option value="Occurrences">Map Popups and clicks</option>
-            <option value="Occurrences">Tectonic plates</option>
-          </select>
+          <select id="datasetSelect" onchange="report(this.value)">
+            <option value="">Please select</option>
+            <option value="">Earthquakes on the Rise?</option>
+            <option value="1">Map Popups and clicks</option>
+            <option value="2">Tectonic plates</option>
+          </select>          
         </div>
       </div>
     </section>
     <!-- The div that holds our map -->
     <div id="map"></div>
->>>>>>> d350bb2893bc1a308a8948bb50895c51b5e23928
+        
+    <!-- Our JavaScript -->    
+    <script type="text/javascript" src="static/js/logic2.js"></script>
 
-    <!-- Leaflet JS -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    <!-- D3 JavaScript -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <!-- Our JavaScript -->
-    <script type="text/javascript" src="static/js/logic.js"></script>
-  </body>
+    <!-- Our JavaScript -->    
+    <script type="text/javascript" src="static/js/logic1.js"></script>
+    
+</body>
 </html>

@@ -1,3 +1,4 @@
+/*
 // Define the map object and pass the default
 let myMap = L.map("map", {
     center: [37.0902, -75.7129],
@@ -5,10 +6,8 @@ let myMap = L.map("map", {
     //layers: [streetmap, tectonicLines]
 });
 
-// Define variables for the three tile layers 
-
 // Add a Satellite layer 
- let googleSatmap = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+let googleSatmap = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
     maxZoom: 20,
     subdomains:['mt0','mt1','mt2','mt3']
 }).addTo(myMap);
@@ -30,48 +29,48 @@ let baseMaps = {
     "Topograhic":topographicmap
 
 };
-
+*/
 // Create separate layer group for the tectonic plate
- let tectonicLines = new L.LayerGroup();
-
-
+let tectonicLines = new L.LayerGroup();
+/*
 // Create an overlay object 
- let overlayMaps = {
+let overlayMaps = {
     "Tectonic plates": tectonicLines,
     
 };
 
+
 // Pass the map layers into the layer control
 L.control.layers(baseMaps, overlayMaps, {collapsed:false}).addTo(myMap);
 
+*/
 // Store the tectonic and earthquake API in URLs
 let tectonicData = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json";
-let earthquakeData = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 // Perform a GET request to the tectonic URL
-    d3.json(tectonicData).then(function(data) {
+d3.json(tectonicData).then(function(data) {
 
     //Get the features data that contains necessary info
     let feature = data.features;
-    console.log(data);
 
-// Loop through the features array and obtain the coordinates for the fault lines 
- for (let i = 0; i < feature.length; i++) {
+    // Loop through the features array and obtain the coordinates for the fault lines 
+    for (let i = 0; i < feature.length; i++) {
 
-//Save the coordinates in a new variable 
-    let coords = feature[i].geometry.coordinates;
-    //console.log(coords);
+        //Save the coordinates in a new variable 
+        let coords = feature[i].geometry.coordinates;
+        //console.log(coords);
 
-    //Coordinates are not in correct format, they need to be flipped
-    //Create new array to store the flipped coords
-    let newCoords = [];
+        //Coordinates are not in correct format, they need to be flipped
+        //Create new array to store the flipped coords
+        let newCoords = [];
 
-    // Push the changes to new array 
-    newCoords.push(coords.map(c => [c[1], c[0]]));
-    //console.log(newCoords);
+        // Push the changes to new array 
+        newCoords.push(coords.map(c => [c[1], c[0]]));
+        //console.log(newCoords);
 
-//Create the polyline using the new coords 
-    let tectonicPlates = L.polyline(newCoords, {
-     color: "blue"
- }).addTo(tectonicLines);
-    }});
+        //Create the polyline using the new coords 
+        L.polyline(newCoords, {
+        color: "blue"
+     }).addTo(tectonicLines);
+    }
+});
